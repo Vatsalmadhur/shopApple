@@ -1,10 +1,15 @@
 import './App.css'
+import Hero from './components/Hero'
+import Highlights from './components/Highlights'
+import { Navbar } from './components/Navbar'
 
 function App() {
 
   return (
     <>
-      <p className='text-3xl font-bold underline'>helloworld</p>
+      <Navbar/>
+      <Hero/>
+      <Highlights/>
     </>
   )
 }
