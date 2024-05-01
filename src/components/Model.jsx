@@ -6,8 +6,8 @@ import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber'
-import { View } from '@react-three/drei'
 import { models, sizes } from '../constants'
+import { View } from '@react-three/drei'
 const Model = () => {
   const [size, setSize] = useState('small')
   const [model, setModel] = useState({
@@ -64,6 +64,7 @@ const Model = () => {
           style={{position:'fixed',top:0,bottom:0,right:0,left:0,overflow:'hidden'}}
           eventSource={document.getElementById('root')}
           >
+          {/* <View.Port/> */}
           <View.Port/>
           </Canvas>
 

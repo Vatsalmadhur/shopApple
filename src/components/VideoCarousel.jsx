@@ -139,8 +139,8 @@ const VideoCarousel = () => {
     <>
       <div className='flex items-center'>
         {hightlightsSlides.map((list, i) => (
-          <div key={list.id} id='slider'>
-            <div className='relative sm:w-[70vw] sm:h-[50vh] w-[88vw] md:h-[70vh]  h-[35vh]'>
+          <div key={list.id} id='slider' >
+            <div className='relative sm:w-[70vw] sm:h-[50vh] w-[88vw] md:h-[70vh]  h-[35vh] '>
               <div className='w-full h-full flex-center rounded-3xl overflow-hidden'>
                 <video src={list.video}
                   id='video'
@@ -180,7 +180,7 @@ const VideoCarousel = () => {
             </span>
           ))}
         </div>
-        <button className='bg-gray-300 rounded-full p-4 backdrop-blur'><img src={isLastVideo ? replayImg : !isPlaying ? playImg : pauseImg} alt={isLastVideo ? 'replay' : !isPlaying ? 'play' : 'pause'} onClick={isLastVideo ? () => handleProcess('video-reset') : !isPlaying ? ()=> handleProcess('play') : ()=>handleProcess('pause')} /></button>
+        <button className='bg-gray-300 rounded-full p-4 backdrop-blur'><img src={isLastVideo ? replayImg : !isPlaying ? playImg : pauseImg} alt={isLastVideo ? 'replay' : !isPlaying ? 'play' : 'pause'} onClick={isLastVideo ? () => handleProcess('video-reset') : !isPlaying ? () => handleProcess('play') : () => handleProcess('pause')} /></button>
 
       </div>
     </>

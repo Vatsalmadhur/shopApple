@@ -8,7 +8,7 @@ const Hero = () => {
     gsap.to('#cta',{opacity:1,y:-50,delay:1.5})
   }, []);
 
-  const [videoSrc,setVideoSrc]=useState<string>(window.innerWidth<760 ? smallHeroVideo : heroVideo)
+  const [videoSrc,setVideoSrc]=useState(window.innerWidth<760 ? smallHeroVideo : heroVideo)
 
   const handleVideoSrc=()=>{
     if( window.innerWidth < 760){
@@ -24,7 +24,7 @@ const Hero = () => {
     return () => {
         window.removeEventListener('resize',handleVideoSrc)
     }
-    
+
   },[])
 
 
