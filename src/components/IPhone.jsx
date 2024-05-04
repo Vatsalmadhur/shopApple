@@ -4,23 +4,27 @@ import { useGLTF, useTexture } from "@react-three/drei";
 
 function Model(props) {
   const { nodes, materials } = useGLTF('/models/scene.glb')
-  // const texture = useTexture(props.item);
-  // useEffect(()=>{
-  //   Object.entries(materials).map((material)=>{
-  //     if (
-  //       material[0] !== "zFdeDaGNRwzccye" &&
-  //       material[0] !== "ujsvqBWRMnqdwPx" &&
-  //       material[0] !== "hUlRcbieVuIiOXG" &&
-  //       material[0] !== "jlzuBkUzuJqgiAK" &&
-  //       material[0] !== "xNrofRCqOXXHVZt"
-  //     ) {
-  //       material[1].color = new THREE.Color(props.item.color[0]);
-  //     }
-  //     material[1].needsUpdate = true;
-  //   }
-  //   );
+  const texture = useTexture(props.item.img);
+  useEffect(()=>{
+    Object.entries(materials).map((material)=>{
+      console.log(props.item);
+      console.log(material[0]);
+      console.log(material[1]);
 
-  // },[materials,props.item])
+      if (
+        material[0] !== "zFdeDaGNRwzccye" &&
+        material[0] !== "ujsvqBWRMnqdwPx" &&
+        material[0] !== "hUlRcbieVuIiOXG" &&
+        material[0] !== "jlzuBkUzuJqgiAK" &&
+        material[0] !== "xNrofRCqOXXHVZt"
+      ) {
+        material[1].color = new THREE.Color(props.item.color[0]);
+      }
+      material[1].needsUpdate = true;
+    }
+    );
+
+  },[materials,props.item])
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -135,7 +139,7 @@ function Model(props) {
         material={materials.pIJKfZsazmcpEiU}
         scale={0.01}
       >
-        {/* <meshStandardMaterial roughness={1} map={texture}/> */}
+        <meshStandardMaterial roughness={1} map={texture}/>
         </mesh>
       <mesh
         castShadow

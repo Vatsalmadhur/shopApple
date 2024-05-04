@@ -11,7 +11,7 @@ const ModelView = ({index,groupRef,gsapType,controlRef,setRotationState,size,ite
     <View
     index={index}
     id={gsapType}
-    className={`border-2 border-red-50 w-full h-full ${index===2} ? 'right-[-100]' : ''`}
+    className={` w-full h-full ${index===2} ? 'right-[-100%]' : ''`}
 
     >
       <ambientLight intensity={0.3}/>
@@ -34,7 +34,6 @@ const ModelView = ({index,groupRef,gsapType,controlRef,setRotationState,size,ite
     <group ref={groupRef} name={`${index===1 ? 'small' : 'large'}`} position={[0,0,0]}>
       <Suspense fallback={<Html><div>Loading...</div></Html>}>
       <IPhone scale={index===1 ? [15,15,15] : [17,17,17]} item={item} size={size} />
-
       </Suspense>
       </group>
 
