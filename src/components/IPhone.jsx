@@ -7,6 +7,8 @@ function Model(props) {
   const texture = useTexture(props.item.img);
   useEffect(()=>{
     Object.entries(materials).map((material)=>{
+      console.log("props.item");
+      
       console.log(props.item);
       console.log(material[0]);
       console.log(material[1]);
