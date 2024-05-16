@@ -29,6 +29,10 @@ canvas {
   max-width: 1120px;
 }
 
+.section-heading {
+  @apply text-gray lg:text-6xl md:text-5xl text-3xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-20
+}
+
 .link {
   @apply text-blue hover:underline cursor-pointer flex items-center text-xl opacity-0 translate-y-20
 }
@@ -62,9 +66,7 @@ canvas {
     @apply sm:py-32 py-20 sm:px-10 px-5
   }
 
-  .section-heading {
-    @apply text-gray lg:text-6xl md:text-5xl text-3xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-20
-  }
+
 
   .feature-text {
     @apply text-gray max-w-md text-lg md:text-xl font-semibold opacity-0 translate-y-[100px]
