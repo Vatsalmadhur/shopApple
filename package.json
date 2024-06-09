@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Vatsalmadhur/shopApple.git",
+  "homepage": "https://Vatsalmadhur.github.io/shopApple",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
