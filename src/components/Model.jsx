@@ -51,10 +51,10 @@ useEffect(()=>{
     gsap.to("#heading", { y: 0, opacity: 1 });
   });
   return (
-    <section>
+    <section className="common-padding">
       <div className="screen-max-width">
-        <h1 id="heading" className="opacity-0">
-          Take a closer look
+        <h1 id="heading" className="opacity-0 text-6xl text-gray-100">
+          Take a closer look.
         </h1>
       </div>
 
