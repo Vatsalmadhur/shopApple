@@ -7,26 +7,29 @@ import VideoCarousel from "./VideoCarousel";
 const Highlights = () => {
   useGSAP(() => {
     gsap.to(".highlightsTitle", { opacity: 1, y: 0, delay: 1.5 });
-    gsap.to(".link", { opacity: 1, y: 0, delay: 1.5,stagger:0.25 });
+    gsap.to(".link", { opacity: 1, y: 0, delay: 1.5, stagger: 0.25 });
   }, []);
   return (
-    <div id="highlights" className="w-full overflow-hidden h-screen bg-zinc">
-      <div className="w-full md:flex items-center justify-between">
-        <p className="highlightsTitle text-3xl text-start opacity-0 translate-y-20">
-          Get the highlights
-        </p>
-        <div className="flex items-center gap-5 justify-center ">
-          <a href="" className="link border-2 border-red-50">
-            Watch the film
-            <img src={watchImg} alt="" className="ml-2" />
-          </a>
-          <a href="" className="link">
-            Watch the event
-            <img src={rightImg} alt="" className="ml-2" />
-          </a>
+    <div id="highlights" className="w-screen overflow-hidden h-full common-padding  bg-zinc ">
+      <div className="screen-max-width">
+        <div className="w-[60vw] md:flex items-center justify-between my-10">
+          <p className="highlightsTitle text-6xl text-start text-gray-100 opacity-0 translate-y-20 ">
+            Get the highlights.
+          </p>
+          <div className="flex items-center gap-5 justify-start py-5 sm:py-0 w-screen sm:w-auto  ">
+            <a href="" className="link">
+              Watch the film
+              <img src={watchImg} alt="" className="ml-2" />
+            </a>
+            <a href="" className="link">
+              Watch the event
+              <img src={rightImg} alt="" className="ml-2" />
+            </a>
+          </div>
         </div>
+        <VideoCarousel />
+
       </div>
-      <VideoCarousel/>
     </div>
   );
 };
