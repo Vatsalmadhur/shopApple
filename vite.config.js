@@ -8,7 +8,7 @@ export default defineConfig({
     org: "devvatsal",
     project: "javascript-react"
   })],
-
+  baseconfig:"/shopApple",
   build: {
     sourcemap: true
   }
